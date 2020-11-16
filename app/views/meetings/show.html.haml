@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b 体重:
+  = @meeting.name
+%p
+  %b 体脂肪:
+  = @meeting.fat
+%p
+  %b Start time:
+  = @meeting.start_time.strftime("%Y-%m-%d %H:%M")
+
+= link_to 'Edit', edit_meeting_path(@meeting)
+\|
+= link_to 'Back', meetings_path

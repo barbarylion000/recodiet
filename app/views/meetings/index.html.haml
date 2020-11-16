@@ -1,0 +1,30 @@
+!!!
+
+%p#idnotice=  notice 
+%h1 Listing meetings
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Start time
+
+  %tbody
+    - @meetings.each do |meeting|
+      %tr
+        %td= meeting.name
+        %td= meeting.start_time.strftime("%Y-%m-%d %H:%M")
+        %td= meeting.fat
+        %td= link_to 'Show', meeting
+        %td= link_to 'Edit', edit_meeting_path(meeting.id)
+        %td= link_to 'Destroy',meeting_path(meeting.id), method: :delete, data: { confirm: 'Are you sure?' }
+  %br/
+        
+        
+=month_calendar events: @meetings do |date, meetings|
+  =date.day
+  =link_to 'New Meeting', new_meeting_path, class:"btn btn-sm btn-outline-secondary"
+
+  - @meetings.each do |meeting| 
+    =meeting.name
+    

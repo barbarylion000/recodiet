@@ -1,0 +1,9 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "custom";
+@import " simple_calendar " ;
+/*
+ *= require_true.
+ *= require_self
+ *= require simple_calendar.
+ */
