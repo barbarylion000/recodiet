@@ -1,0 +1,2 @@
+module GraffHelper
+end

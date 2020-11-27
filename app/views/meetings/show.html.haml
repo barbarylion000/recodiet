@@ -8,7 +8,7 @@
   = @meeting.fat
 %p
   %b Start time:
-  = @meeting.start_time.strftime("%Y-%m-%d %H:%M")
+  = @meeting.start_time.strftime('%Y-%m-%d %H:%M')
 
 = link_to 'Edit', edit_meeting_path(@meeting)
 \|

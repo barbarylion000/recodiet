@@ -1,30 +1,29 @@
 !!!
 
 %p#idnotice=  notice 
-%h1 Listing meetings
+%h1 カレンダー
 
 %table
   %thead
     %tr
-      %th Name
-      %th Start time
-
+      %th 体重｜
+      %th 体脂肪｜
+      %th 時間
+    =link_to 'マイページ', mypage_show_path, class: 'btn btn-default btn-black'
+    =link_to '体重グラフ', graff_show_path, class: 'btn btn-default btn-black'
+    =link_to '体脂肪グラフ',fat_show_path, class: 'btn btn-default btn-black'
   %tbody
     - @meetings.each do |meeting|
       %tr
         %td= meeting.name
-        %td= meeting.start_time.strftime("%Y-%m-%d %H:%M")
         %td= meeting.fat
-        %td= link_to 'Show', meeting
-        %td= link_to 'Edit', edit_meeting_path(meeting.id)
-        %td= link_to 'Destroy',meeting_path(meeting.id), method: :delete, data: { confirm: 'Are you sure?' }
+        %td= meeting.start_time.strftime('%Y-%m-%d %H:%M')
+        %td= link_to '閲覧', meeting
+        %td= link_to '編集', edit_meeting_path(meeting.id)
+        %td= link_to '削除',meeting_path(meeting.id), method: :delete, data: { confirm: 'Are you sure?' }
   %br/
         
         
 =month_calendar events: @meetings do |date, meetings|
   =date.day
   =link_to 'New Meeting', new_meeting_path, class:"btn btn-sm btn-outline-secondary"
-
-  - @meetings.each do |meeting| 
-    =meeting.name
-    

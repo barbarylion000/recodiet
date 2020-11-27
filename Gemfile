@@ -65,3 +65,5 @@ gem 'haml-rails'
 gem 'chartkick'
 
 gem 'erb2haml'
+
+gem 'groupdate'

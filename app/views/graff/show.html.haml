@@ -1,0 +1,5 @@
+%p 体重　月間
+%p
+  /= line_chart User.group_by_day(:created_at).count
+  = line_chart @data,min: 20, max: 100, xtitle: "日付", ytitle: "体重",xmin: "2020-11-01", xmax: "2021-01-01"
+  = javascript_include_tag "https://www.gstatic.com/charts/loader.js"

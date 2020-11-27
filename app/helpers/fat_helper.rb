@@ -1,0 +1,2 @@
+module FatHelper
+end
