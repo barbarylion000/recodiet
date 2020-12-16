@@ -1,6 +1,6 @@
 %h1 体重グラフ
 %h1
-    = javascript_include_tag "//www.google.com/jsapi", "chartkick" 
+%header(javascript_include_tag "//www.google.com/jsapi", "chartkick")
     = link_to 'カレンダー', meetings_path, class: 'btn btn-default btn-black'
     = link_to 'マイページ', mypage_show_path, class: 'btn btn-default btn-black'
     = line_chart Meeting.group_by_day(:created_at).average(:name),min: 40, max: 80,xtitle: "日付", ytitle: "体重",suffix:"kg"
