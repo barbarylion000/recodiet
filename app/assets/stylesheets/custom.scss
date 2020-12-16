@@ -126,3 +126,78 @@ h1, h2 {
   color         : #999999;     /* 背景色     */
   background    : #ffffff;     /* 文字色     */
 }
+
+.btn-flat-double-border {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: #67c5ff;
+  border: double 4px #67c5ff;
+  border-radius: 3px;
+  transition: .4s;
+}
+.btn-flat-double-border:hover {
+  background: #fffbef;
+}
+
+/*以下マイページ用*/
+header {
+  margin-top: 20px;
+  background-color: rgba(0,0,0,0.0);
+
+}
+
+.container {
+  width: 920px;
+  margin: 0 auto 40px auto;
+}
+
+.header-title-area {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.logo {
+  font-size: 20px;
+}
+
+.h1 {
+  font-size: 60px;
+}
+
+.text-sub {
+  background-color: rgba(0,0,0,0.0);
+
+}
+
+.body {
+   background-image: image-url('bg-top.png');
+}
+
+.text-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.card-contents {
+  padding: 40px;
+  margin-bottom: 20px;
+  background-color: rgba(0,0,0,0.0);
+}
+
+.meeting-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('meeting-back.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+}
+
+.back {
+  background-color: rgba(0,0,0,0.0);
+}

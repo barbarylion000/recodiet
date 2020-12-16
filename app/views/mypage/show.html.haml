@@ -1,6 +1,12 @@
-.mypage-wrapper 
-  .users-new-container
-= link_to 'カレンダー', meetings_path, class: 'btn btn-default btn-black'
-= link_to '体重グラフ', graff_show_path, class: 'btn btn-default btn-black'
-=link_to '体脂肪グラフ', fat_show_path, class: 'btn btn-default btn-black'
-=link_to 'ご褒美', gift_show_path,class: 'btn btn-default btn-black'
+.top-hero-wrapper.text-center
+   .cotainer.top-hero-container
+      .h1.text-white Recodiet
+      .logo.text-white トレーニングお疲れ様です
+      .row
+         .col-md-offset-3.col-md-3
+            =link_to 'カレンダー', meetings_path, class: 'btn btn-default btn-white'
+         .col-md-3
+            =link_to 'グラフ', graff_show_path, class: 'btn btn-default btn-white'
+/以下拡張する際に使用
+/=link_to '体脂肪グラフ', fat_show_path, class: 'btn btn-default btn-black'
+/=link_to 'ご褒美', gift_show_path,class: 'btn btn-default btn-black'

@@ -1,5 +1,5 @@
 class Graff < ApplicationRecord
-   def self.chart_date
-      order(result_date: :asc).pluck('result_date', 'result').to_h   
-   end
+    def index
+        @meeting = Meeting.group_by_day(:name).count
+    end
 end

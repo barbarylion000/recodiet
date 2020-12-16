@@ -1,15 +1,21 @@
 Rails.application.routes.draw do
+  #get 'chart_sample/index'
+
   resources :meetings
   resources :posts
-  
+  resources :graff
   get 'mypage/show'
   
   get 'graff/show'
   
   get 'fat/show'
   
+  #post 'meetings'
+  
   get 'gift/show'
-  #get 'meetings/index'
+ 
+  get 'meetings/index'
+  
   root 'pages#index'
   devise_for :users
    

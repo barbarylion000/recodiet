@@ -1,8 +1,7 @@
 !!!
 
 %p#idnotice=  notice 
-%h1 カレンダー
-
+%h1.text-center カレンダー
 %table
   %thead
     %tr
@@ -10,14 +9,14 @@
       %th 体脂肪｜
       %th 時間
     =link_to 'マイページ', mypage_show_path, class: 'btn btn-default btn-black'
-    =link_to '体重グラフ', graff_show_path, class: 'btn btn-default btn-black'
-    =link_to '体脂肪グラフ',fat_show_path, class: 'btn btn-default btn-black'
+    =link_to 'グラフ', graff_show_path, class: 'btn btn-default btn-black'
+    /=link_to '体脂肪グラフ',fat_show_path, class: 'btn btn-default btn-black'
   %tbody
     - @meetings.each do |meeting|
       %tr
         %td= meeting.name
         %td= meeting.fat
-        %td= meeting.start_time.strftime('%Y-%m-%d %H:%M')
+        %td= meeting.start_time.strftime('%Y年-%m月-%d日 %H:%M:%S')
         %td= link_to '閲覧', meeting
         %td= link_to '編集', edit_meeting_path(meeting.id)
         %td= link_to '削除',meeting_path(meeting.id), method: :delete, data: { confirm: 'Are you sure?' }
@@ -26,4 +25,4 @@
         
 =month_calendar events: @meetings do |date, meetings|
   =date.day
-  =link_to 'New Meeting', new_meeting_path, class:"btn btn-sm btn-outline-secondary"
+  =link_to '記入', new_meeting_path, class:"btn btn-sm btn-outline-secondary"

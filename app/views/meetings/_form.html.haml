@@ -8,10 +8,12 @@
 
   .field
     = f.label :体重
-    = f.text_field :name
+    = f.text_field :name,placeholder: '例）70'
+    kg
   .field
     = f.label :体脂肪
-    = f.text_field :fat
+    = f.text_field :fat,placeholder: '例）20' 
+    '%'
   .field
     = f.label :記録時間
     = f.datetime_select :start_time

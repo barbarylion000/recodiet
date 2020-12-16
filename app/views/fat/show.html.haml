@@ -1,4 +1,8 @@
-%p 体脂肪グラフ
-
-= line_chart @data,min: 20, max: 100, xtitle: "日付", ytitle: "体脂肪",xmin: "2020-11-01", xmax: "2021-01-01"
-  = javascript_include_tag "https://www.gstatic.com/charts/loader.js"
+%p 
+%p
+   %h1 体脂肪グラフ
+   = link_to 'カレンダー', meetings_path, class: 'btn btn-default btn-black'
+   =link_to 'マイページ', mypage_show_path, class: 'btn btn-default btn-black'
+   =link_to '体重グラフ', graff_show_path, class: 'btn btn-default btn-black'
+   = line_chart @data,min: 20, max: 100, xtitle: "日付", ytitle: "体脂肪",xmin: "2020-11-01", xmax: "2021-01-01"
+   = javascript_include_tag "https://www.gstatic.com/charts/loader.js"

@@ -1,3 +1,5 @@
-def index
-  @user_data= User.where(payment_result: 1).group("date(created_at)").count
+class GraffController < ApplicationController
+   def index
+      @data = [['2019-06-01', 100], ['2019-06-02', 200], ['2019-06-03', 150]]
+   end
 end

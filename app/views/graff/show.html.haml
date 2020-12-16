@@ -1,5 +1,7 @@
-%p 体重　月間
-%p
-  /= line_chart User.group_by_day(:created_at).count
-  = line_chart @data,min: 20, max: 100, xtitle: "日付", ytitle: "体重",xmin: "2020-11-01", xmax: "2021-01-01"
-  = javascript_include_tag "https://www.gstatic.com/charts/loader.js"
+%h1 体重グラフ
+%h1
+    = javascript_include_tag "//www.google.com/jsapi", "chartkick" 
+    = link_to 'カレンダー', meetings_path, class: 'btn btn-default btn-black'
+    = link_to 'マイページ', mypage_show_path, class: 'btn btn-default btn-black'
+    = line_chart Meeting.group_by_day(:created_at).average(:name),min: 40, max: 80,xtitle: "日付", ytitle: "体重",suffix:"kg"
+    = line_chart Meeting.group_by_day(:created_at).average(:fat),min: 10,max: 30,xtitle: "日付", ytitle: "体脂肪",suffix: "%"
