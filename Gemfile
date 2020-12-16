@@ -54,6 +54,8 @@ group :development do
 end
 
 group :production do
+  gem 'chartkick'
+  gem 'groupdate'
   gem 'pg'
 end
 
@@ -72,10 +74,6 @@ gem 'simple_calendar','~> 2.0'
 gem 'haml-rails'
 
 gem 'erb2haml'
-
-gem 'groupdate'
-
-gem 'chartkick'
 
 gem 'chart-js-rails','~> 0.1.4'
 
