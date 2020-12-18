@@ -2,7 +2,8 @@
 %h1
 %header
     /=javascript_include_tag "//www.google.com/jsapi", "chartkick"
-    =javascript_include_tag "Chart.bundle", "chartkick",'data-turbolinks-track':'reload'
+    /=javascript_include_tag "Chart.bundle", "chartkick",'data-turbolinks-track':'reload'
+    = javascript_include_tag 'application'
     = link_to 'カレンダー', meetings_path, class: 'btn btn-default btn-black'
     = link_to 'マイページ', mypage_show_path, class: 'btn btn-default btn-black'
     = line_chart Meeting.group_by_day(:created_at).average(:name),min: 40, max: 80,xtitle: "日付", ytitle: "体重",suffix:"kg"
