@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   
   get 'fat/show'
   
+  get 'kcal/show'
+  
   #post 'meetings'
   
   get 'gift/show'

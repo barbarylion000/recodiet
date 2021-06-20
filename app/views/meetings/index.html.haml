@@ -7,15 +7,21 @@
     %tr
       %th 体重｜
       %th 体脂肪｜
+      %th メニュー　　｜
+      %th 摂取カロリー｜
+      %th 消費カロリー｜
       %th 時間
     =link_to 'マイページ', mypage_show_path, class: 'btn btn-default btn-black'
     =link_to 'グラフ', graff_show_path, class: 'btn btn-default btn-black'
-    /=link_to '体脂肪グラフ',fat_show_path, class: 'btn btn-default btn-black'
+    = link_to 'カロリー計算',kcal_show_path, class: 'btn btn-default btn-black'
   %tbody
     - @meetings.each do |meeting|
       %tr
         %td= meeting.name
         %td= meeting.fat
+        %td= meeting.menu
+        %td= meeting.ci
+        %td= meeting.cc
         %td= meeting.start_time.strftime('%Y年-%m月-%d日 %H:%M:%S')
         %td= link_to '閲覧', meeting
         %td= link_to '編集', edit_meeting_path(meeting.id)

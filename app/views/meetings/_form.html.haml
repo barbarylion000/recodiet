@@ -13,7 +13,18 @@
   .field
     = f.label :体脂肪
     = f.text_field :fat,placeholder: '例）20' 
-    '%'
+    ％
+    .field
+    = f.label :メニュー
+    = f.text_field :menu,placeholder: 'ベンチプレス' 
+    .field
+    = f.label :消費カロリー
+    = f.text_field :cc,placeholder: '例）300' 
+    Kcal
+    .field
+    = f.label :摂取カロリー
+    = f.text_field :ci,placeholder: '例）400' 
+    Kcal
   .field
     = f.label :記録時間
     = f.datetime_select :start_time

@@ -6,5 +6,8 @@
     = javascript_include_tag 'application'
     = link_to 'カレンダー', meetings_path, class: 'btn btn-default btn-black'
     = link_to 'マイページ', mypage_show_path, class: 'btn btn-default btn-black'
+    = link_to 'カロリー計算',kcal_show_path, class: 'btn btn-default btn-black'
     = line_chart Meeting.group_by_day(:created_at).average(:name),min: 40, max: 80,xtitle: "日付", ytitle: "体重",suffix:"kg"
     = line_chart Meeting.group_by_day(:created_at).average(:fat),min: 10,max: 30,xtitle: "日付", ytitle: "体脂肪",suffix: "%"
+    = line_chart Meeting.group_by_day(:created_at).average(:ci),min: 100,max: 3000,xtitle: "日付", ytitle: "摂取カロリー",suffix: "Kcal"
+    = line_chart Meeting.group_by_day(:created_at).average(:cc),min: 100,max: 3000,xtitle: "日付", ytitle: "摂取カロリー",suffix: "Kcal"
