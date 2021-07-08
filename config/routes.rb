@@ -1,16 +1,23 @@
 Rails.application.routes.draw do
+  get 'kcals/new'
+
   #get 'chart_sample/index'
 
   resources :meetings
   resources :posts
   resources :graff
+  resources :kcals
+  #4devise_for :kcal
+  
   get 'mypage/show'
   
   get 'graff/show'
   
   get 'fat/show'
   
-  get 'kcal/show'
+  get 'kcals/index'
+  
+  #get 'kcals/new'
   
   #post 'meetings'
   

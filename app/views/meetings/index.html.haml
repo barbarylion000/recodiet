@@ -13,7 +13,7 @@
       %th 時間
     =link_to 'マイページ', mypage_show_path, class: 'btn btn-default btn-black'
     =link_to 'グラフ', graff_show_path, class: 'btn btn-default btn-black'
-    = link_to 'カロリー計算',kcal_show_path, class: 'btn btn-default btn-black'
+    = link_to 'カロリー計算',kcals_new_path, class: 'btn btn-default btn-black'
   %tbody
     - @meetings.each do |meeting|
       %tr

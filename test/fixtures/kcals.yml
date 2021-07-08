@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  weight1: 1
+  height1: 1
+  age1: 1
+  bmr1: 1
+  tdee1: 1
+
+two:
+  weight1: 1
+  height1: 1
+  age1: 1
+  bmr1: 1
+  tdee1: 1

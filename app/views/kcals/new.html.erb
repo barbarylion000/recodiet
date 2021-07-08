@@ -1,0 +1,28 @@
+<%=link_to 'マイページ', mypage_show_path, class: 'btn btn-default btn-black' %>
+<%=link_to 'グラフ', graff_show_path, class: 'btn btn-default btn-black' %>
+<%= link_to 'カレンダー',meetings_path, class: 'btn btn-default btn-black' %>
+
+<p>数字を入力してください</p>
+
+<%= form_for @kcal do |f| %>
+<p>
+
+ <%= f.label :体重 %><br>
+ <%= f.number_field :weight1  %>
+</p>
+
+ <p><%= f.label :身長  %><br>
+ <%= f.number_field :height1 %>
+ </p>
+ 
+ <p><%= f.label :年齢 %><br>
+ <%= f.number_field :age1 %>
+ </p>
+ 
+ <p>
+ <%= f.submit :計算 %>
+ </p>
+<% end %>
+
+
+
