@@ -2,18 +2,20 @@
 <%=link_to 'グラフ', graff_show_path, class: 'btn btn-default btn-black' %>
 <%= link_to 'カレンダー',meetings_path, class: 'btn btn-default btn-black' %>
 <%= link_to 'カロリー計算',kcals_new_path, class: 'btn btn-default btn-black' %>
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 <h1> 結果</h1>
 
-<h3> 一日の基礎代謝</p>
+<h3> 一日の基礎代謝量</p>
 <%= @kcal.bmr1_keisan.round %>kcal
 
 <h3> 一日の総消費カロリー</p>
 <%= @kcal.tdee1_keisan.round %>kcal
 
-<h2>TDEE（総消費カロリー）とは</h2>
+<h3>TDEE（総消費カロリー）とは</h3>
 
   <h4 class="n1">TDEEはTotal Daily Energy Expenditureの略で、基礎代謝量に一日の活動カロリーを足したもので、一日の総消費カロリーのことをいいます。</h4>
   
-<h2>TDEE（基礎代謝量）とは</h2>
+<h3>BMR（基礎代謝量）とは</h3>
   
   <h4 class="n1">BMRは、生命を維持するために必要なエネルギー量のことです。</h4>

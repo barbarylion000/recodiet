@@ -2,10 +2,10 @@
 <%=link_to 'グラフ', graff_show_path, class: 'btn btn-default btn-black' %>
 <%= link_to 'カレンダー',meetings_path, class: 'btn btn-default btn-black' %>
 
-<p>数字を入力してください</p>
+<h1>数字を入力してください</h1>
 
 <%= form_for @kcal do |f| %>
-<p>
+<h3>
 
  <%= f.label :体重 %><br>
  <%= f.number_field :weight1  %>
